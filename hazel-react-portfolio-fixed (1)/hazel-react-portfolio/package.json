@@ -1,0 +1,27 @@
+{
+  "name": "hazel-react-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "For my porfolio",
+  "repository": {
+    "type": "git",
+    "url": "hazeljane"
+  },
+  "license": "ISC",
+  "author": "hazel",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^5.0.3",
+    "@vitejs/plugin-react": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "vite": "latest"
+  },
+  "devDependencies": {}
+}
