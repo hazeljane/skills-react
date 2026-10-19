@@ -1,0 +1,194 @@
+
+.skills-section {
+  --skills-bg: #fff8eb;
+  --skills-dark: #29251f;
+  --skills-muted: #716657;
+  --skills-brown: #a96827;
+  --skills-gold: #ffc966;
+
+  position: relative;
+  overflow: hidden;
+  padding: 100px clamp(22px, 7vw, 100px);
+  background:
+    radial-gradient(
+      circle at 8% 85%,
+      rgb(255 201 102 / 14%),
+      transparent 28%
+    ),
+    var(--skills-bg);
+  color: var(--skills-dark);
+}
+
+.skills-container {
+  width: 100%;
+  max-width: 1150px;
+  margin-inline: auto;
+}
+
+/* Section heading */
+.skills-heading {
+  max-width: 650px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.skills-eyebrow {
+  margin-bottom: 16px;
+  color: var(--skills-brown);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+}
+
+.skills-heading h2 {
+  margin-bottom: 18px;
+  font-size: clamp(2.7rem, 5vw, 4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.055em;
+}
+
+.skills-heading h2 span {
+  color: var(--skills-brown);
+}
+
+.skills-intro {
+  max-width: 520px;
+  margin-inline: auto;
+  color: var(--skills-muted);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* Single skill card carousel */
+.skills-carousel {
+  width: 100%;
+  max-width: 520px;
+  margin-inline: auto;
+  background: orange;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px 2px inset rgba(0, 0, 0, .5);
+}
+
+/* Previous and Next controls */
+.skills-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  margin-top: 26px;
+}
+
+.skills-arrow {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border: 1px solid #d9b77b;
+  border-radius: 50%;
+  background: #fffdf7;
+  color: var(--skills-dark);
+  font-size: 1.35rem;
+  cursor: pointer;
+  transition:
+    background 200ms ease,
+    color 200ms ease,
+    border-color 200ms ease,
+    transform 200ms ease;
+}
+
+.skills-arrow:hover {
+  transform: translateY(-2px);
+  border-color: var(--skills-dark);
+  background: var(--skills-dark);
+  color: var(--skills-gold);
+}
+
+.skills-arrow:active {
+  transform: scale(0.96);
+}
+
+.skills-arrow:focus-visible {
+  outline: 3px solid var(--skills-gold);
+  outline-offset: 4px;
+}
+
+/* Current skill number */
+.skills-counter {
+  min-width: 64px;
+  color: #655b4d;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Bottom message */
+.skills-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 38px;
+  color: var(--skills-muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.skills-note span {
+  color: var(--skills-brown);
+  font-size: 1.1rem;
+}
+
+/* Responsive layout */
+@media (max-width: 700px) {
+  .skills-section {
+    padding-block: 75px;
+  }
+
+  .skills-heading {
+    margin-bottom: 35px;
+  }
+
+  .skills-heading h2 {
+    font-size: clamp(2.4rem, 9vw, 3.2rem);
+  }
+
+  .skills-intro {
+    font-size: 0.95rem;
+  }
+
+  .skills-carousel {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 380px) {
+  .skills-section {
+    padding-inline: 16px;
+  }
+
+  .skills-controls {
+    gap: 16px;
+  }
+
+  .skills-arrow {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .skills-arrow {
+    transition: none;
+  }
+
+  .skills-arrow:hover,
+  .skills-arrow:active {
+    transform: none;
+  }
+}

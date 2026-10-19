@@ -1,0 +1,244 @@
+
+.about-section {
+  padding: 100px clamp(24px, 7vw, 100px);
+  background: #fffdf7;
+  color: #29251f;
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+  align-items: center;
+  gap: clamp(40px, 8vw, 100px);
+  max-width: 1150px;
+  margin-inline: auto;
+}
+
+.about-content {
+  max-width: 650px;
+}
+
+.about-eyebrow {
+  margin-bottom: 18px;
+  color: #a96827;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+}
+
+.about-content h2 {
+  margin-bottom: 25px;
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  font-weight: 800;
+  letter-spacing: -0.06em;
+  line-height: 1.05;
+}
+
+.about-content h2 span {
+  color: #b87935;
+}
+
+.about-intro {
+  margin-bottom: 18px;
+  color: #393127;
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+.about-description {
+  margin-bottom: 16px;
+  color: #716657;
+  font-size: 0.98rem;
+  line-height: 1.9;
+}
+
+.about-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  min-height: 50px;
+  margin-top: 16px;
+  padding: 0 22px;
+  border-radius: 12px;
+  background: #29251f;
+  color: #fff8eb;
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition: background 200ms ease, transform 200ms ease;
+}
+
+.about-button:hover {
+  background: #a96827;
+  transform: translateY(-2px);
+}
+
+.about-button:focus-visible {
+  outline: 3px solid #ffc966;
+  outline-offset: 4px;
+}
+
+/* Profile card */
+
+.about-card {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(24px, 4vw, 34px);
+  border: 1px solid rgb(255 201 102 / 16%);
+  border-radius: 24px;
+  background: #29251f;
+  color: #fff8eb;
+  box-shadow: 0 24px 60px rgb(41 37 31 / 12%);
+}
+
+.about-card::before {
+  position: absolute;
+  top: -80px;
+  right: -65px;
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  background: rgb(255 201 102 / 12%);
+  content: "";
+  pointer-events: none;
+}
+
+.about-card-top {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.about-avatar {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  border: 2px solid #ffe0a0;
+  border-radius: 20px;
+  background: #ffc966;
+  color: #29251f;
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.about-card-top h3 {
+  margin-bottom: 7px;
+  font-size: 1.05rem;
+}
+
+.about-card-top p {
+  color: #d4cabc;
+  font-size: 0.82rem;
+}
+
+.about-divider {
+  height: 1px;
+  margin: 27px 0;
+  background: rgb(255 248 235 / 13%);
+}
+
+.about-card h4 {
+  margin-bottom: 20px;
+  color: #ffc966;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+}
+
+.about-focus-list {
+  display: grid;
+  gap: 18px;
+  padding: 0;
+  list-style: none;
+}
+
+.about-focus-list li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #f5ede0;
+  font-size: 0.9rem;
+}
+
+.about-focus-list li span {
+  color: #ffc966;
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+
+.about-card-footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgb(255 248 235 / 13%);
+  color: #d4cabc;
+  font-size: 0.8rem;
+}
+
+.about-status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #8bd49b;
+}
+
+/* Responsive layout */
+
+@media (max-width: 800px) {
+  .about-section {
+    padding-block: 75px;
+  }
+
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-content {
+    max-width: 650px;
+  }
+
+  .about-card {
+    width: 100%;
+    max-width: 550px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section {
+    padding-inline: 22px;
+  }
+
+  .about-content h2 {
+    font-size: 2.8rem;
+  }
+
+  .about-card {
+    padding: 23px 20px;
+    border-radius: 20px;
+  }
+
+  .about-card-top {
+    gap: 12px;
+  }
+
+  .about-avatar {
+    width: 54px;
+    height: 54px;
+    border-radius: 16px;
+  }
+
+  .about-focus-list li {
+    font-size: 0.84rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-button {
+    transition: none;
+  }
+}
